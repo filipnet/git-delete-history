@@ -21,12 +21,12 @@ git checkout --orphan temp_branch
 # Add all files to this new orphan branch
 git add -A
 git commit -am "update"
-# Delete main branch
-git branch -D main
-# Rename the previously created orphan branch to 'main branch'
-git branch -m main
-# Push new main branch without history data to remote git repository
-git push -f origin main
+# Delete master branch
+git branch -D master
+# Rename the previously created orphan branch to 'master branch'
+git branch -m master
+# Push new master branch without history data to remote git repository
+git push -f origin master
 ```
 
 ## LICENSE
