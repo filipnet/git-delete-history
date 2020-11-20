@@ -14,7 +14,9 @@ This will remove your history completely, You will not be able to recover it aga
 ## GIT commands
 
 The following commands can be copy and paste into the command line with line comments, e.g. from VSCode
+Update: GitHub changed the default branch from MASTER to MAIN, so you have to take care in here:
 
+### MASTER
 ```
 # Create a new orphan branch (will not be shown by command 'git branch')
 git checkout --orphan temp_branch
@@ -27,6 +29,21 @@ git branch -D master
 git branch -m master
 # Push new master branch without history data to remote git repository
 git push -f origin master
+```
+
+### MAIN
+```
+# Create a new orphan branch (will not be shown by command 'git branch')
+git checkout --orphan temp_branch
+# Add all files to this new orphan branch
+git add -A
+git commit -am "update"
+# Delete main branch
+git branch -D main
+# Rename the previously created orphan branch to 'main branch'
+git branch -m main
+# Push new master branch without history data to remote git repository
+git push -f origin main
 ```
 
 ## LICENSE
